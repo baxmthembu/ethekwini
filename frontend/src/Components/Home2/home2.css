@@ -26,6 +26,49 @@
     top: 35%;
 }
 
+.muvo-histor{
+    position: absolute;
+    left: 35px;
+    width: 20%;
+    top: 45%;
+}
+
+.muvo{
+    background-color: gainsboro;
+    text-decoration: none;
+    color: #000;
+    height: 60px;
+    align-content: center;
+}
+
+.muvo h4{
+    text-decoration: none;
+    color: #000;
+    align-content: center;
+}
+
+.track-bus{
+    position: absolute;
+    left: 35px;
+    width: 20%;
+    top: 55%;
+}
+
+.bus{
+    background-color: orange;
+    text-decoration: none;
+    color: #000;
+    height: 60px;
+    align-content: center;   
+}
+
+.bus h4{
+    text-decoration: none;
+    color: #000;
+    align-content: center;
+}
+
+
 .balance{
     background-color: cadetblue;
     align-items: center;

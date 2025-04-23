@@ -68,10 +68,13 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import { format } from 'date-fns';
-import './home2.css'
+import './home2.css';
+import PayPal from '../Paypal/paypal';
 
 const Home2 = () => {
     const [tweets, setTweets] = useState([]);
+    const [showMessageButton, setShowMessageButton] = useState(true);
+
 
     useEffect(() => {
         fetchTweets();
@@ -85,6 +88,11 @@ const Home2 = () => {
             console.error('Error fetching tweets:', error);
         }
     };
+
+    const handlePayButtonClick = () => {
+        setShowMessageButton(false);
+    };
+
 
     return (
         <div style={{ margin: 0, padding: 0 }}>
@@ -105,7 +113,7 @@ const Home2 = () => {
 
             {/* Display submitted updates */}
             <div className='card-container'>
-                <label><h1>Tweets</h1></label>
+                <label><h1>Updates</h1></label>
                 {tweets.length === 0 ? (
                     <p>No updates available.</p>
                 ) : (
@@ -126,7 +134,17 @@ const Home2 = () => {
             <div className='balance-container'>
                 <div className='balance'>
                     <h4>Outstanding Balance: R1894</h4>
-                    <button>Pay now</button>
+                    {<PayPal onClick={handlePayButtonClick} />}
+                </div>
+            </div>
+            <div className='muvo-histor'>
+                <div className='muvo'>
+                    <Link to='/muvo_history'><h4>Muvo Bus History</h4></Link>
+                </div>
+            </div>
+            <div className='track-bus'>
+                <div className='bus'>
+                    <Link to='/muvo_history'><h4>Track Bus</h4></Link>
                 </div>
             </div>
             <div className='message'>

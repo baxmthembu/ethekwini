@@ -12,12 +12,16 @@ import Updates from './Components/Worker/Worker_Updates/updates';
 import React, {useState} from 'react';
 import Worker_Register from './Components/Worker/Worker_Register/worker_register';
 import Worker_Login from './Components/Worker/worker_Login/worker_login';
+import { TweetProvider } from './Components/TweetContext';
+import CreditCardForm from './Components/Card_Info/card_info';
+import Muvo_History from './Components/Muvo_history/muvo_history';
 
 const App = () => {
 
   return (
     <div className="App">
       <BrowserRouter>
+      <TweetProvider>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='cable' element={<Cable />} />
@@ -30,7 +34,10 @@ const App = () => {
           <Route path='/update' element={<Updates />} />
           <Route path='/worker_register' element={<Worker_Register />} />
           <Route path='/worker_login' element={<Worker_Login />} />
+          <Route path='/card_info' element={<CreditCardForm />} />
+          <Route path='/muvo_history' element={<Muvo_History />} />
         </Routes>
+        </TweetProvider>
       </BrowserRouter>
     </div>
   );

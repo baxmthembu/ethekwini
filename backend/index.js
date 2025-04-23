@@ -303,6 +303,16 @@ app.get('/user/addresses', async (req, res) => {
     res.status(500).json({ msg: 'Server error' });
   }
 });
+
+app.get('/muvo_history', async(req, res) => {
+  try{
+    const data = await db.select('*').from('muvo_history');
+    res.json(data)
+  }catch(error){
+    console.error('Error fetching data', error);
+    res.status(500).json({msg: 'Server error'})
+  }
+})
   
 const port = 3000
 app.listen(port, () => {

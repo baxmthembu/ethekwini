@@ -34,6 +34,7 @@ const Updates = () => {
                 if (response.status === 200) {
                     console.log("Text sent successful");
                     toast.success('Text sent')
+                    setFormData({ tweet: '' });
                 } else {
                     console.error("Text failure");
                 }

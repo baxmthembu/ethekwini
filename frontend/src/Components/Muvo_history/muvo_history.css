@@ -1,0 +1,65 @@
+table{
+    width: 70%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 52%;
+    left: 15%
+}
+table, tr, th, td{
+    border: 1px solid #d4d4d4;
+    border-collapse: collapse;
+    padding: 12px;
+}
+th, td{
+    text-align: left;
+    vertical-align: top;
+}
+tr:nth-child(even){
+    background-color: #e7e9eb;
+}
+
+tr:nth-child(odd){
+    background-color: white;
+}
+
+.search-bar{
+    position: absolute;
+    top: 40%;
+    left: 21%;
+}
+.search-bar input {
+    width: 190%;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 30px;
+}
+
+h2{
+    position: absolute;
+    top: 26%;
+    left: 40%;
+    font-size: 40px;
+}
+hr{
+    position: absolute;
+    left: 40%;
+    top: 10%
+}
+
+.muvo-history p{
+    position: absolute;
+    top: 55%;
+    left: 45%;
+}
+
+th{
+    background-color: burlywood;
+}
+
+tbody{
+    position: relative;
+    top: 10%
+}

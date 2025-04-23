@@ -32,4 +32,5 @@ textarea{
     font-size: 15px;
     font-weight: bold;
     background-color: bisque;
+    cursor: pointer;
 }

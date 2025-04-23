@@ -1,0 +1,14 @@
+.button{
+    width: 30%;
+    position: inherit;
+    height: 30px;
+    background-color: antiquewhite;
+    font-weight: bold;
+    cursor: pointer;
+    top: 10%
+}
+
+#paypal-button-container{
+    position: relative;
+    left: 21%
+}
